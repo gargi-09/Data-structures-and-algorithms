@@ -9,3 +9,5 @@ Data Strucutres and Algorihtms in Python:
 * Graphs
 * Tries
 * Heap/Priority Queue
+* Sorting Algorithms
+* Dynamic Programming
