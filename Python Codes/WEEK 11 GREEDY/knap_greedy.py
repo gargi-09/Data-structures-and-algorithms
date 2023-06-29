@@ -1,0 +1,1 @@
+#Implementation of Greedy method on knapsack problem
