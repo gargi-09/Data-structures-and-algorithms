@@ -20,7 +20,7 @@ class LinkedList:
             return True
         return False
 
-    def display(self):                  #Time complexity=O() and space complexity=O()
+    def display(self):                  #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         p=self.head
@@ -30,7 +30,7 @@ class LinkedList:
         print()
         return
 
-    def len_l(self):                    #Time complexity=O() and space complexity=O()
+    def len_l(self):                    #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         count=0
@@ -40,7 +40,7 @@ class LinkedList:
             p=p.next
         return count
 
-    def search(self,value=None,pos=None):       #Time complexity=O() and space complexity=O()
+    def search(self,value=None,pos=None):       #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         if value!=None:
@@ -68,7 +68,7 @@ class LinkedList:
                 return False
 
     
-    def create_list(self):          #Time complexity=O() and space complexity=O()
+    def create_list(self):          #Time complexity=O(n*m)
         n=1
         while n!=0:
             data=int(input("Enter data:"))
@@ -83,7 +83,7 @@ class LinkedList:
                 p.next=temp
             n=int(input("If you want to continue press 1 else 0:"))
     
-    def insert_at_the_beg(self,data):           #Time complexity=O() and space complexity=O()
+    def insert_at_the_beg(self,data):           #Time complexity=O(1)
         temp=Node(data)
         if self.isNone():
             temp.next=None
@@ -92,7 +92,7 @@ class LinkedList:
             temp.next=self.head
             self.head=temp
 
-    def insert_in_the_middle(self,data,pos):        #Time complexity=O() and space complexity=O()
+    def insert_in_the_middle(self,data,pos):        #Time complexity=O(n)
         temp=Node(data)
         if self.isNone():
             temp.next=None
@@ -112,7 +112,7 @@ class LinkedList:
                 p.next=temp
                 temp.next=q
 
-    def insert_at_the_end(self,data):       #Time complexity=O() and space complexity=O()
+    def insert_at_the_end(self,data):       #Time complexity=O(n)
         temp=Node(data)
         if self.isNone():
             temp.next=None
@@ -125,13 +125,13 @@ class LinkedList:
             temp.next=None
     
 
-    def delete_at_the_beg(self):        #Time complexity=O() and space complexity=O()
+    def delete_at_the_beg(self):        #Time complexity=O(1)
         if self.isNone():
             return "Head is Null.Insert First!"
         
         self.head=self.head.next
     
-    def delete_in_the_middle(self,pos):     #Time complexity=O() and space complexity=O()
+    def delete_in_the_middle(self,pos):     #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         if pos==0:
@@ -146,7 +146,7 @@ class LinkedList:
                 i+=1
             p.next=p.next.next
 
-    def delete_at_the_end(self):        #Time complexity=O() and space complexity=O()
+    def delete_at_the_end(self):        #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         p=self.head
@@ -154,7 +154,7 @@ class LinkedList:
             p=p.next
         p.next=None
 
-    def update_by_value(self,ovalue,nvalue):        #Time complexity=O() and space complexity=O()
+    def update_by_value(self,ovalue,nvalue):        #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         if type(self.search(ovalue))!=int:
@@ -164,7 +164,7 @@ class LinkedList:
             p=p.next
         p.data=nvalue
 
-    def update_by_pos(self,value,pos):      #Time complexity=O() and space complexity=O()
+    def update_by_pos(self,value,pos):      #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         i=0
@@ -188,12 +188,12 @@ class DoublyLinkedList:
             return f"Head is Null.Insert first!"
         return f"Head is {self.head.data}"
 
-    def isNone(self):       #Time complexity=O() and space complexity=O()
+    def isNone(self):       #Time complexity=O(1)
         if self.head==None:
             return True
         return False
 
-    def len_l(self):        #Time complexity=O() and space complexity=O()
+    def len_l(self):        #Time complexity=O(n)
         if self.isNone():
             return "Head is empty.Insert first!"
         p=self.head
@@ -203,7 +203,7 @@ class DoublyLinkedList:
             p=p.next
         return count
 
-    def search(self,value=None,pos=None):       #Time complexity=O() and space complexity=O()
+    def search(self,value=None,pos=None):       #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         if value!=None:
@@ -230,7 +230,7 @@ class DoublyLinkedList:
             else:
                 return False
 
-    def display(self):      #Time complexity=O() and space complexity=O()
+    def display(self):      #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         p=self.head
@@ -239,7 +239,7 @@ class DoublyLinkedList:
             p=p.next
         print()
 
-    def rev_display(self):          #Time complexity=O() and space complexity=O()
+    def rev_display(self):          #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         p=self.head
@@ -250,7 +250,7 @@ class DoublyLinkedList:
             p=p.prev
         print()
 
-    def create_list(self):          #Time complexity=O() and space complexity=O()
+    def create_list(self):          #Time complexity=O(n*m)
         n=1
         while n!=0:
             data=int(input("Enter the data:"))
@@ -269,7 +269,7 @@ class DoublyLinkedList:
 
             n=int(input("If you want to continue press 1 else 0:"))
 
-    def insert_at_the_beg(self,data):           #Time complexity=O() and space complexity=O()
+    def insert_at_the_beg(self,data):           #Time complexity=O(1)
         temp=Node(data)
         if self.isNone():
             self.head=temp
@@ -278,7 +278,7 @@ class DoublyLinkedList:
             temp.next=self.head
             self.head=temp
 
-    def insert_in_the_middle(self,data,pos):            #Time complexity=O() and space complexity=O()
+    def insert_in_the_middle(self,data,pos):            #Time complexity=O(n)
         temp=Node(data)
         if self.isNone():
             self.head=temp
@@ -295,7 +295,7 @@ class DoublyLinkedList:
             p.next.prev=temp
             p.next=temp
 
-    def insert_at_the_end(self,data):           #Time complexity=O() and space complexity=O()
+    def insert_at_the_end(self,data):           #Time complexity=O(n)
         temp=Node(data)
         if self.isNone():
             self.head=temp
@@ -306,13 +306,13 @@ class DoublyLinkedList:
             temp.prev=p
             p.next=temp
         
-    def delete_at_the_beg(self):            #Time complexity=O() and space complexity=O()
+    def delete_at_the_beg(self):            #Time complexity=O(1)
         if self.isNone():
             return "Head is Null.Insert First!"
         self.head.next.prev=None
         self.head=self.head.next
 
-    def delete_in_the_middle(self,pos):     #Time complexity=O() and space complexity=O()
+    def delete_in_the_middle(self,pos):     #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         i=0
@@ -325,7 +325,7 @@ class DoublyLinkedList:
         p.next.next.prev=p
         p.next=p.next.next
 
-    def delete_at_the_end(self):        #Time complexity=O() and space complexity=O()
+    def delete_at_the_end(self):        #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         p=self.head
@@ -334,7 +334,7 @@ class DoublyLinkedList:
         p.next.prev=None
         p.next=None
 
-    def update_by_value(self,ovalue,nvalue):        #Time complexity=O() and space complexity=O()
+    def update_by_value(self,ovalue,nvalue):        #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         if type(self.search(ovalue))!=int:
@@ -345,7 +345,7 @@ class DoublyLinkedList:
         p.data=nvalue
         print(p.data)
 
-    def update_by_pos(self,value,pos):          #Time complexity=O() and space complexity=O()
+    def update_by_pos(self,value,pos):          #Time complexity=O(n)
         if self.isNone():
             return "Head is Null.Insert First!"
         i=0
